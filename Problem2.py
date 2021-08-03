@@ -12,5 +12,13 @@ Filename: Problem2.py
 # In terms of a function: Fn = Fn-1 + Fn-2
 # the current term is equivalent to the sum of the last two terms
 
-def fibonacci():
+def fibonacci(limit):
     seq = []
+    a = 0
+    b = 0
+    temp = None
+    for i in range(limit):
+        b = b + a
+        a = temp
+        seq.append(b)
+
